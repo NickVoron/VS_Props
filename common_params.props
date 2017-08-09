@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir>
+    </OutDir>
+    <IntDir>$(SharedTecINT).\_obj-libs-etc\intermediate\$(ProjectName)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName).$(Configuration)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalOptions>-Zm180  %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>..\..\..\..\third_party\;..\..\..\..\third_party\include\;..\..\..\..\third_party\zlib\;..\..\..\..\third_party\fbxsdk\include\;..\..\..\..\third_party\dxsdk\include\;..\..\..\..\third_party\include\angle\include\;..\..\..\..\boost-cmake\boost\boost_1_64_0\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4995;4996;4005;4503;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ForcedIncludeFiles>config/platform.h;stdafx.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PreprocessorDefinitions>UNICODE;PLATFORM_NAME="$(PlatformShortName)";__x86__;__WIN32__</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>user32.lib;gdi32.lib;winmm.lib;comctl32.lib;shell32.lib;advapi32.lib;ole32.lib;vfw32.lib;Wldap32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SharedTecSDK)\Stable\boost\stage\$(PlatformShortName)\lib\;$(SharedTecSDK)\Stable\ThirdParty\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+</Project>
