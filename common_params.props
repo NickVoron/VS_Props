@@ -10,7 +10,7 @@
   <ItemDefinitionGroup>
     <ClCompile>
       <AdditionalOptions>-Zm180  %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>..\..\..\..\third_party\;..\..\..\..\third_party\include\;..\..\..\..\third_party\zlib\;..\..\..\..\third_party\fbxsdk\include\;..\..\..\..\third_party\dxsdk\include\;..\..\..\..\third_party\include\angle\include\;..\..\..\..\boost-cmake\boost\boost_1_64_0\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\..\third_party\;..\..\..\..\third_party\include\;..\..\..\..\third_party\zlib\;..\..\..\..\third_party\fbxsdk\include\;..\..\..\..\third_party\dxsdk\include\;..\..\..\..\third_party\include\angle\include\;..\..\..\..\boost-cmake\boost\boost_1_64_0\;..\..\third_party\;..\..\boost-cmake\boost\boost_1_64_0\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -22,7 +22,6 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>user32.lib;gdi32.lib;winmm.lib;comctl32.lib;shell32.lib;advapi32.lib;ole32.lib;vfw32.lib;Wldap32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(SharedTecSDK)\Stable\boost\stage\$(PlatformShortName)\lib\;$(SharedTecSDK)\Stable\ThirdParty\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>

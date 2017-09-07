@@ -14,7 +14,7 @@
       <AdditionalOptions>/fixed:no /time /verbose:incr %(AdditionalOptions)</AdditionalOptions>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(SolutionDir)Product\$(ProjectName)\$(ProjectName).$(Configuration).$(PlatformShortName)$(TargetExt)</OutputFile>
-      <AdditionalLibraryDirectories>..\..\..\..\third_party\lib\;..\..\..\..\third_party\dxsdk\Lib\;$(SharedTecINT)\.\_obj-libs-etc\libs\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\..\..\third_party\lib\;..\..\..\..\third_party\dxsdk\Lib\;..\..\..\..\boost-cmake\boost\boost_1_64_0\stage\$(PlatformShortName)\lib;$(SharedTecINT)\.\_obj-libs-etc\libs\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
 </Project>
