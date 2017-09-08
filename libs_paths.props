@@ -2,9 +2,9 @@
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
-    <OutDir>$(SharedTecINT).\_obj-libs-etc\libs\</OutDir>
+    <OutDir>$(SolutionDir)\..\_obj-libs-etc\libs\</OutDir>
     <TargetName>$(ProjectName).$(Configuration).$(PlatformShortName)</TargetName>
-    <IntDir>$(SharedTecINT).\_obj-libs-etc\intermediate\$(ProjectName)\$(Configuration)\$(PlatformName)\</IntDir>
+    <IntDir>$(SolutionDir)\..\_obj-libs-etc\intermediate\$(ProjectName)\$(Configuration)\$(PlatformName)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
@@ -13,7 +13,7 @@
       </XMLDocumentationFileName>
     </ClCompile>
     <Lib>
-      <OutputFile>$(SharedTecINT)\.\_obj-libs-etc\libs\$(ProjectName).$(Configuration).$(PlatformShortName)$(TargetExt)</OutputFile>
+      <OutputFile>$(SolutionDir)\..\_obj-libs-etc\libs\$(ProjectName).$(Configuration).$(PlatformShortName)$(TargetExt)</OutputFile>
       <AdditionalOptions>/ignore:4221 %(AdditionalOptions)</AdditionalOptions>
     </Lib>
   </ItemDefinitionGroup>
