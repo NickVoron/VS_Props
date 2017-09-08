@@ -4,8 +4,7 @@
     <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
     <OutDir>
     </OutDir>
-    <IntDir>$(SolutionDir)\..\_obj-libs-etc\intermediate\$(ProjectName)\$(Configuration)\</IntDir>
-    <TargetName>$(ProjectName).$(Configuration).$(PlatformShortName)</TargetName>
+    <IntDir>$(SolutionDir)\..\_obj-libs-etc\intermediate\$(ProjectName)\$(Configuration)\$(PlatformName)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
