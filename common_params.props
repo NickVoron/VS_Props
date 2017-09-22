@@ -15,7 +15,7 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4995;4996;4005;4503;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <ForcedIncludeFiles>config/platform.h;stdafx.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
-      <PreprocessorDefinitions>UNICODE;PLATFORM_NAME="$(PlatformShortName)";__x86__;__WIN32__</PreprocessorDefinitions>
+      <PreprocessorDefinitions>UNICODE;PLATFORM_NAME="$(PlatformShortName)";__x86__;__WIN32__;DIRECTINPUT_VERSION=0x0800</PreprocessorDefinitions>
       <LanguageStandard>stdcpp14</LanguageStandard>
       <DisableLanguageExtensions>false</DisableLanguageExtensions>
     </ClCompile>
