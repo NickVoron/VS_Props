@@ -8,7 +8,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
-      <AdditionalOptions>-Zm180  %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-Zm180  /permissive- /Zc:strictStrings- %(AdditionalOptions)</AdditionalOptions>
       <AdditionalIncludeDirectories>..\..\..\..\third_party\;..\..\..\..\third_party\include\;..\..\..\..\third_party\zlib\;..\..\..\..\third_party\fbxsdk\include\;..\..\..\..\third_party\dxsdk\include\;..\..\..\..\third_party\include\angle\include\;..\..\..\..\boost-cmake\boost\boost_1_64_0\;..\..\third_party\;..\..\boost-cmake\boost\boost_1_64_0\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
