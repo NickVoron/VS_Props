@@ -2,17 +2,17 @@
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
-    <OutDir>$(SolutionDir)\..\_obj-libs-etc\libs\</OutDir>
+    <OutDir>$(BuildOutDir)\libs\</OutDir>
     <TargetName>$(ProjectName).$(Configuration).$(PlatformShortName)</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
-      <AdditionalIncludeDirectories>$(SolutionDir)\Sources\Libraries;..\..\Stable\Sources\Libraries;..\..\..\..\Stable\Sources\Libraries;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\Sources\Libraries;..\..\Stable\Sources\Libraries;..\..\..\..\Stable\Sources\Libraries;..\..\..\..\SandBox\Sources\Libraries;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <XMLDocumentationFileName>
       </XMLDocumentationFileName>
     </ClCompile>
     <Lib>
-      <OutputFile>$(SolutionDir)\..\_obj-libs-etc\libs\$(ProjectName).$(Configuration).$(PlatformShortName)$(TargetExt)</OutputFile>
+      <OutputFile>$(BuildOutDir)\libs\$(ProjectName).$(Configuration).$(PlatformShortName)$(TargetExt)</OutputFile>
       <AdditionalOptions>/ignore:4221 %(AdditionalOptions)</AdditionalOptions>
     </Lib>
   </ItemDefinitionGroup>

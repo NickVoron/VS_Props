@@ -1,27 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="UserMacros">
+    <IgnoreWarnIntDirInTempDetected>true</IgnoreWarnIntDirInTempDetected>
+    <BuildOutDir>$(SolutionDir)\..\_obj-lib-etc\</BuildOutDir>
+  </PropertyGroup>
   <PropertyGroup>
     <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
     <OutDir>
     </OutDir>
-    <IntDir>$(SolutionDir)\..\_obj-libs-etc\intermediate\$(ProjectName)\$(Configuration)\$(PlatformName)\</IntDir>
+    <IntDir>$(BuildOutDir)\intermediate\$(ProjectName)\$(Configuration)\$(PlatformName)\</IntDir>
   </PropertyGroup>
+  <ItemGroup>
+    <BuildMacro Include="IgnoreWarnIntDirInTempDetected">
+      <Value>$(IgnoreWarnIntDirInTempDetected)</Value>
+    </BuildMacro>
+    <BuildMacro Include="BuildOutDir">
+      <Value>$(BuildOutDir)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+  </ItemGroup>
   <ItemDefinitionGroup>
     <ClCompile>
-      <AdditionalOptions>-Zm180  /permissive- /Zc:strictStrings- %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>..\..\..\..\third_party\;..\..\..\..\third_party\include\;..\..\..\..\third_party\zlib\;..\..\..\..\third_party\fbxsdk\include\;..\..\..\..\third_party\dxsdk\include\;..\..\..\..\third_party\include\angle\include\;..\..\..\..\boost-cmake\boost\boost_1_64_0\;..\..\third_party\;..\..\boost-cmake\boost\boost_1_64_0\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zm180 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>..\..\..\..\third_party\Qt\5.9.2\msvc2017_64\include\;..\..\..\..\third_party\;..\..\..\..\third_party\include\;..\..\..\..\third_party\zlib\;..\..\..\..\third_party\fbxsdk\include\;..\..\..\..\third_party\dxsdk\include\;..\..\..\..\third_party\include\angle\include\;..\..\third_party\;..\..\boost-cmake\boost\boost_1_65_1\;..\..\boost-cmake\boost\boost_1_64_0\;..\..\..\..\boost-cmake\boost\boost_1_65_1\;..\..\..\..\boost-cmake\boost\boost_1_64_0\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4995;4996;4005;4503;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <ForcedIncludeFiles>config/platform.h;stdafx.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PreprocessorDefinitions>UNICODE;PLATFORM_NAME="$(PlatformShortName)";__x86__;__WIN32__;DIRECTINPUT_VERSION=0x0800</PreprocessorDefinitions>
-      <LanguageStandard>stdcpp14</LanguageStandard>
+      <LanguageStandard>stdcpp17</LanguageStandard>
       <DisableLanguageExtensions>false</DisableLanguageExtensions>
     </ClCompile>
     <Link>
       <AdditionalDependencies>user32.lib;gdi32.lib;winmm.lib;comctl32.lib;shell32.lib;advapi32.lib;ole32.lib;vfw32.lib;Wldap32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\..\..\..\third_party\Qt\5.9.2\msvc2017_64\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
+    <Lib>
+      <OutputFile>$(BuildOutDir)\libs\$(TargetName)$(TargetExt)</OutputFile>
+    </Lib>
   </ItemDefinitionGroup>
 </Project>

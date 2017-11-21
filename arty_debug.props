@@ -10,8 +10,6 @@
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link />
-    <Link>
-      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
-    </Link>
+    <Link />
   </ItemDefinitionGroup>
 </Project>

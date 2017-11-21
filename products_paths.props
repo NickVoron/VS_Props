@@ -7,14 +7,14 @@
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
-      <AdditionalIncludeDirectories>$(SolutionDir)\Sources\Libraries;..\..\..\..\Stable\Sources\Libraries;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\Sources\Libraries;..\..\..\..\Stable\Sources\Libraries;..\..\..\..\SandBox\Sources\Libraries;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>PROJECT_NAME=$(ProjectName);%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <AdditionalOptions>/fixed:no /time /verbose:incr %(AdditionalOptions)</AdditionalOptions>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(SolutionDir)Product\$(ProjectName)\$(ProjectName).$(Configuration).$(PlatformShortName)$(TargetExt)</OutputFile>
-      <AdditionalLibraryDirectories>..\..\..\..\third_party\lib\;..\..\..\..\third_party\dxsdk\Lib\;..\..\..\..\boost-cmake\boost\boost_1_64_0\stage\$(PlatformShortName)\lib;$(SolutionDir)\..\_obj-libs-etc\libs\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\..\..\third_party\lib\;..\..\..\..\third_party\dxsdk\Lib\;..\..\..\..\boost-cmake\boost\boost_1_65_1\stage\$(PlatformShortName)\lib;..\..\..\..\boost-cmake\boost\boost_1_64_0\stage\$(PlatformShortName)\lib;$(BuildOutDir)\libs\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
 </Project>
