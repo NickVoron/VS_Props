@@ -22,13 +22,13 @@
   <ItemDefinitionGroup>
     <ClCompile>
       <AdditionalOptions>-Zm180 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>..\..\..\..\third_party\Qt\5.9.2\msvc2017_64\include\;..\..\..\..\third_party\;..\..\..\..\third_party\include\;..\..\..\..\third_party\zlib\;..\..\..\..\third_party\fbxsdk\include\;..\..\..\..\third_party\dxsdk\include\;..\..\..\..\third_party\include\angle\include\;..\..\third_party\;..\..\boost-cmake\boost\boost_1_65_1\;..\..\boost-cmake\boost\boost_1_64_0\;..\..\..\..\boost-cmake\boost\boost_1_65_1\;..\..\..\..\boost-cmake\boost\boost_1_64_0\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\Sources\Libraries;..\..\..\..\Stable\Sources\Libraries;..\..\..\..\SandBox\Sources\Libraries;..\..\..\..\dht\Sources\Libraries;..\..\..\..\ffice\Sources\Libraries;..\..\..\..\beast_test\Sources\Libraries;..\..\..\..\ipc_test\Sources\Libraries;..\..\..\..\third_party\Qt\5.9.2\msvc2017_64\include\;..\..\..\..\third_party\;..\..\..\..\third_party\include\;..\..\..\..\third_party\zlib\;..\..\Stable\Sources\Libraries\curl;..\..\..\..\Stable\Sources\Libraries\curl;..\..\..\..\third_party\cpr\include\;..\..\..\..\third_party\fbxsdk\include\;..\..\..\..\third_party\dxsdk\include\;..\..\..\..\third_party\include\angle\include\;..\..\third_party\;..\..\third_party\curl\include\;..\..\third_party\cpr\include\;..\..\boost-cmake\boost\boost_1_66_0\;..\..\boost-cmake\boost\boost_1_65_1\;..\..\boost-cmake\boost\boost_1_64_0\;..\..\..\..\boost-cmake\boost\boost_1_66_0\;..\..\..\..\boost-cmake\boost\boost_1_65_1\;..\..\..\..\boost-cmake\boost\boost_1_64_0\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4995;4996;4005;4503;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <ForcedIncludeFiles>config/platform.h;stdafx.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
-      <PreprocessorDefinitions>UNICODE;PLATFORM_NAME="$(PlatformShortName)";__x86__;__WIN32__;DIRECTINPUT_VERSION=0x0800</PreprocessorDefinitions>
+      <PreprocessorDefinitions>UNICODE;PLATFORM_NAME="$(PlatformShortName)";__x86__;__WIN32__;DIRECTINPUT_VERSION=0x0800;USE_WINDOWS;CURL_STATICLIB;USE_SSL;USE_OPENSSL</PreprocessorDefinitions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <DisableLanguageExtensions>false</DisableLanguageExtensions>
     </ClCompile>
