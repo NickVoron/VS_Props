@@ -11,5 +11,9 @@
     </ClCompile>
     <Link />
     <Link />
+    <Link>
+      <AdditionalLibraryDirectories>..\..\..\..\_obj-lib-etc\Debug\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>FreeImage.lib;LibJPEG.lib;LibJXR.lib;libogg.lib;LibOpenJPEG.lib;LibPNG.lib;libpsd.lib;LibRawLite.lib;libtheora.lib;LibTIFF4.lib;libutp.lib;libvorbis.lib;LibWebP.lib;minizip.lib;nvtristrip.lib;OpenEXR.lib;rijndael.lib;udt.lib;utfcvt.lib;zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
 </Project>
